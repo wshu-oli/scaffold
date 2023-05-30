@@ -21,6 +21,7 @@
         <module>scaffold-db</module>
         <module>scaffold-redis</module>
         <module>scaffold-app</module>
+        <module>scaffold-auth</module>
     </modules>
 
     <properties>
