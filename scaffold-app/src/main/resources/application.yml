@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sambox?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: z314159.
+  data:
+    redis:
+      port: 6379
+      host: localhost
+      lettuce:
+        pool:
+          max-idle: 10
+          min-idle: 5
+          max-active: 40
+          max-wait: 60s
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
