@@ -1,4 +1,4 @@
-package net.ws.redis;
+package net.ws.common.cache;
 
 public interface IRedisKey {
 

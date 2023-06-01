@@ -13,6 +13,30 @@
     <packaging>pom</packaging>
     <modules>
         <module>scaffold-plugin-auth</module>
+        <module>scaffold-plugin-sys</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.ws</groupId>
+            <artifactId>scaffold-db</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>net.ws</groupId>
+            <artifactId>scaffold-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>net.ws</groupId>
+            <artifactId>scaffold-redis</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>net.ws</groupId>
+            <artifactId>scaffold-plugin-auth-api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
