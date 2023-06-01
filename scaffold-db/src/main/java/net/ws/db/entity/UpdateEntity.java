@@ -21,7 +21,7 @@ import lombok.experimental.SuperBuilder;
 public abstract class UpdateEntity extends BaseEntity {
 
     /**
-     * 创建用户
+     * 修改人
      */
     private Long modifier;
     /**

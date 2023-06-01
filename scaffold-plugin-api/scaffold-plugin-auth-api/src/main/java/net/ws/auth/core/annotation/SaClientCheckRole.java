@@ -10,10 +10,8 @@
  * 5.不可二次分发开源参与同类竞品，如有想法可联系团队xiaonuobase@qq.com商议合作。
  * 6.若您的项目无法满足以上几点，需要更多功能代码，获取Snowy商业授权许可，请在官网购买授权，地址为 https://www.xiaonuo.vip
  */
-package net.ws.auth.annotation;
+package net.ws.auth.core.annotation;
 
-
-import net.ws.auth.util.StpClientUtil;
 
 import org.springframework.core.annotation.AliasFor;
 
@@ -21,6 +19,7 @@ import java.lang.annotation.*;
 
 import cn.dev33.satoken.annotation.SaCheckRole;
 import cn.dev33.satoken.annotation.SaMode;
+import vip.xiaonuo.auth.core.util.StpClientUtil;
 
 /**
  * 角色认证(前台User版)：必须具有指定角色标识才能进入该方法
@@ -32,7 +31,7 @@ import cn.dev33.satoken.annotation.SaMode;
 @SaCheckRole(type = StpClientUtil.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.METHOD, ElementType.TYPE})
-public @interface ClientCheckRole {
+public @interface SaClientCheckRole {
 
     /**
      * 需要校验的角色标识

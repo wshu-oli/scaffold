@@ -1,4 +1,4 @@
-package net.ws.auth.dto;
+package net.ws.auth.core.dto;
 
 import java.util.Date;
 import java.util.List;
@@ -7,17 +7,17 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * 基础的C端登录用户对象，可继承此类扩展更多属性
+ * 基础的B端登录用户对象，可继承此类扩展更多属性
  *
  * @author xuyuxiang
  * @date 2021/12/23 21:49
  */
 @Getter
 @Setter
-public abstract class ClientLoginDto {
+public abstract class LoginUserDto {
 
     /** id */
-    private String id;
+    private Long id;
 
     /** 头像 */
     private String avatar;
@@ -99,6 +99,33 @@ public abstract class ClientLoginDto {
 
     /** 紧急联系人地址 */
     private String emergencyAddress;
+
+    /** 员工编号 */
+    private String empNo;
+
+    /** 入职日期 */
+    private String entryDate;
+
+    /** 组织id */
+    private String orgId;
+
+    /** 组织名称 */
+    private String orgName;
+
+    /** 职位id */
+    private String positionId;
+
+    /** 职位名称 */
+    private String positionName;
+
+    /** 职级 */
+    private String positionLevel;
+
+    /** 主管id */
+    private String directorId;
+
+    /** 兼任信息 */
+    private String positionJson;
 
     /** 上次登录ip */
     private String lastLoginIp;

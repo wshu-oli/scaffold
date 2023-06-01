@@ -1,16 +1,4 @@
-/*
- * Copyright [2022] [https://www.xiaonuo.vip]
- *
- * Snowy采用APACHE LICENSE 2.0开源协议，您在使用过程中，需要注意以下几点：
- *
- * 1.请不要删除和修改根目录下的LICENSE文件。
- * 2.请不要删除和修改Snowy源码头部的版权声明。
- * 3.本项目代码可免费商业使用，商业使用请保留源码和相关描述文件的项目出处，作者声明等。
- * 4.分发源码时候，请注明软件出处 https://www.xiaonuo.vip
- * 5.不可二次分发开源参与同类竞品，如有想法可联系团队xiaonuobase@qq.com商议合作。
- * 6.若您的项目无法满足以上几点，需要更多功能代码，获取Snowy商业授权许可，请在官网购买授权，地址为 https://www.xiaonuo.vip
- */
-package net.ws.auth.dto;
+package net.ws.auth.core.dto;
 
 import java.util.Date;
 import java.util.List;
@@ -19,14 +7,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * 基础的B端登录用户对象，可继承此类扩展更多属性
+ * 基础的C端登录用户对象，可继承此类扩展更多属性
  *
  * @author xuyuxiang
  * @date 2021/12/23 21:49
  */
 @Getter
 @Setter
-public abstract class LoginUserDto {
+public abstract class ClientLoginDto {
 
     /** id */
     private String id;
@@ -111,33 +99,6 @@ public abstract class LoginUserDto {
 
     /** 紧急联系人地址 */
     private String emergencyAddress;
-
-    /** 员工编号 */
-    private String empNo;
-
-    /** 入职日期 */
-    private String entryDate;
-
-    /** 组织id */
-    private String orgId;
-
-    /** 组织名称 */
-    private String orgName;
-
-    /** 职位id */
-    private String positionId;
-
-    /** 职位名称 */
-    private String positionName;
-
-    /** 职级 */
-    private String positionLevel;
-
-    /** 主管id */
-    private String directorId;
-
-    /** 兼任信息 */
-    private String positionJson;
 
     /** 上次登录ip */
     private String lastLoginIp;

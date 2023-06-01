@@ -1,17 +1,18 @@
 package net.ws.auth.api;
 
-import net.ws.auth.dto.ClientLoginDto;
-import net.ws.auth.dto.LoginUserDto;
-
 import java.util.List;
 
 import cn.hutool.json.JSONObject;
+import vip.xiaonuo.auth.core.pojo.SaBaseClientLoginUser;
+import vip.xiaonuo.auth.core.pojo.SaBaseLoginUser;
 
 /**
  * 登录用户API，由其他模块实现
  *
+ * @author xuyuxiang
+ * @date 2021/12/23 21:48
  */
-public interface LoginApi {
+public interface LoginUserApi {
 
     /**
      * 根据id获取B端用户信息，查不到则返回null
@@ -19,7 +20,7 @@ public interface LoginApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    LoginUserDto getUserById(String id);
+    SaBaseLoginUser getUserById(String id);
 
     /**
      * 根据id获取C端用户信息，查不到则返回null
@@ -27,7 +28,7 @@ public interface LoginApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    ClientLoginDto getClientUserById(String id);
+    SaBaseClientLoginUser getClientUserById(String id);
 
     /**
      * 根据账号获取B端用户信息，查不到则返回null
@@ -35,7 +36,7 @@ public interface LoginApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    LoginUserDto getUserByAccount(String account);
+    SaBaseLoginUser getUserByAccount(String account);
 
     /**
      * 根据账号获取C端用户信息，查不到则返回null
@@ -43,7 +44,7 @@ public interface LoginApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    ClientLoginDto getClientUserByAccount(String account);
+    SaBaseClientLoginUser getClientUserByAccount(String account);
 
     /**
      * 根据手机号获取B端用户信息，查不到则返回null
@@ -51,7 +52,7 @@ public interface LoginApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    LoginUserDto getUserByPhone(String phone);
+    SaBaseLoginUser getUserByPhone(String phone);
 
     /**
      * 根据手机号获取C端用户信息，查不到则返回null
@@ -59,7 +60,7 @@ public interface LoginApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    ClientLoginDto getClientUserByPhone(String phone);
+    SaBaseClientLoginUser getClientUserByPhone(String phone);
 
     /**
      * 根据用户id获取用户集合

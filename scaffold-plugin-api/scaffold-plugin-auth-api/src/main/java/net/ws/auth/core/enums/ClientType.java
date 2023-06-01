@@ -1,4 +1,4 @@
-package net.ws.auth.enums;
+package net.ws.auth.core.enums;
 
 import net.ws.common.exception.CommonException;
 
@@ -8,7 +8,7 @@ import lombok.Getter;
  * 登录端类型枚举
  **/
 @Getter
-public enum ClientTypeEnum {
+public enum ClientType {
 
     /**
      * B端用户
@@ -22,7 +22,7 @@ public enum ClientTypeEnum {
 
     private final String value;
 
-    ClientTypeEnum(String value) {
+    ClientType(String value) {
         this.value = value;
     }
 

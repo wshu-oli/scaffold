@@ -23,6 +23,11 @@ public abstract class BaseEntity implements Serializable {
     private Long id;
 
     /**
+     * 创建人
+     */
+    private Long creator;
+
+    /**
      * 创建时间
      */
     @TableField(fill = FieldFill.INSERT)

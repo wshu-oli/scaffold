@@ -1,4 +1,4 @@
-package net.ws.auth.util;
+package net.ws.auth.core.util;
 
 import java.util.List;
 

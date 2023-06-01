@@ -6,7 +6,7 @@ import lombok.Getter;
  * 系统内置的不可删除的标识枚举
  **/
 @Getter
-public enum SysBuildInEnum {
+public enum SysBuildIn {
 
     /** 超管用户账号 */
     BUILD_IN_USER_ACCOUNT("superAdmin", "超管"),
@@ -24,7 +24,7 @@ public enum SysBuildInEnum {
 
     private final String name;
 
-    SysBuildInEnum(String value, String name) {
+    SysBuildIn(String value, String name) {
         this.value = value;
         this.name = name;
     }

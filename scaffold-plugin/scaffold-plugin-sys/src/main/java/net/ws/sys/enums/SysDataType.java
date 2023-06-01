@@ -6,7 +6,7 @@ import lombok.Getter;
  * 系统模块数据类型枚举
  **/
 @Getter
-public enum SysDataTypeEnum {
+public enum SysDataType {
 
     /**
      * 组织
@@ -35,7 +35,7 @@ public enum SysDataTypeEnum {
 
     private final String value;
 
-    SysDataTypeEnum(String value) {
+    SysDataType(String value) {
         this.value = value;
     }
 

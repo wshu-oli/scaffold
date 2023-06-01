@@ -1,4 +1,4 @@
-package net.ws.sys;
+package net.ws.app.generator;
 
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
@@ -13,7 +13,7 @@ import java.util.Collections;
  * @author Oliver
  * @date 2023年03月18日 13:24
  */
-public class MybatisPlusGenerator {
+public class MybatisPlusSysGenerator {
     /**
      * 数据源配置
      */

@@ -1,6 +1,7 @@
-package net.ws.auth.util;
+package net.ws.auth.core.util;
 
-import net.ws.auth.dto.ClientLoginDto;
+
+import net.ws.auth.core.dto.ClientLoginDto;
 
 import java.util.List;
 
