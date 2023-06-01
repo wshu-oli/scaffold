@@ -1,6 +1,6 @@
 package net.ws.sys.listener;
 
-import net.ws.auth.core.dto.LoginUser;
+import net.ws.auth.core.pojo.LoginUser;
 import net.ws.auth.core.util.StpLoginUserUtil;
 import net.ws.common.listener.CommonDataChangeListener;
 import net.ws.sys.enums.RedisKey;

@@ -1,8 +1,8 @@
 package net.ws.sys.core.user.provider;
 
 import net.ws.auth.api.LoginUserApi;
-import net.ws.auth.core.dto.ClientLogin;
-import net.ws.auth.core.dto.LoginUser;
+import net.ws.auth.core.pojo.ClientLogin;
+import net.ws.auth.core.pojo.LoginUser;
 import net.ws.sys.core.user.service.SysUserService;
 
 import org.springframework.stereotype.Service;
@@ -34,7 +34,7 @@ public class LoginUserApiProvider implements LoginUserApi {
      * @date 2022/3/10 16:14
      **/
     @Override
-    public LoginUser getUserById(String id) {
+    public LoginUser getUserById(Long id) {
         return sysUserService.getUserById(id);
     }
 
@@ -45,7 +45,7 @@ public class LoginUserApiProvider implements LoginUserApi {
      * @date 2022/3/10 16:14
      **/
     @Override
-    public ClientLogin getClientUserById(String id) {
+    public ClientLogin getClientUserById(Long id) {
         return null;
     }
 
@@ -56,7 +56,7 @@ public class LoginUserApiProvider implements LoginUserApi {
      * @date 2021/12/28 15:35
      **/
     @Override
-    public SysLoginUser getUserByAccount(String account) {
+    public LoginUser getUserByAccount(String account) {
         return sysUserService.getUserByAccount(account);
     }
 
@@ -100,7 +100,7 @@ public class LoginUserApiProvider implements LoginUserApi {
      * @date 2022/4/27 22:53
      */
     @Override
-    public List<JSONObject> listUserByUserIdList(List<String> userIdList) {
+    public List<JSONObject> listUserByUserIdList(List<Long> userIdList) {
         return sysUserService.listByIds(userIdList).stream().map(JSONUtil::parseObj).collect(Collectors.toList());
     }
 
@@ -111,7 +111,7 @@ public class LoginUserApiProvider implements LoginUserApi {
      * @date 2022/4/27 22:53
      */
     @Override
-    public List<JSONObject> getRoleListByUserId(String userId) {
+    public List<JSONObject> getRoleListByUserId(Long userId) {
         return sysUserService.getRoleList(userId);
     }
 
@@ -122,7 +122,7 @@ public class LoginUserApiProvider implements LoginUserApi {
      * @date 2022/4/27 22:54
      */
     @Override
-    public List<String> getButtonCodeListListByUserAndRoleIdList(List<String> userAndRoleIdList) {
+    public List<String> getButtonCodeListListByUserAndRoleIdList(List<Long> userAndRoleIdList) {
         return sysUserService.getButtonCodeList(userAndRoleIdList);
     }
 
@@ -133,7 +133,7 @@ public class LoginUserApiProvider implements LoginUserApi {
      * @date 2022/4/27 22:54
      */
     @Override
-    public List<String> getMobileButtonCodeListListByUserIdAndRoleIdList(List<String> userAndRoleIdList) {
+    public List<String> getMobileButtonCodeListListByUserIdAndRoleIdList(List<Long> userAndRoleIdList) {
         return sysUserService.getMobileButtonCodeList(userAndRoleIdList);
     }
 
@@ -144,7 +144,7 @@ public class LoginUserApiProvider implements LoginUserApi {
      * @date 2022/4/27 22:54
      */
     @Override
-    public List<JSONObject> getPermissionListByUserIdAndRoleIdList(List<String> userAndRoleIdList, String orgId) {
+    public List<JSONObject> getPermissionListByUserIdAndRoleIdList(List<Long> userAndRoleIdList, Long orgId) {
         return sysUserService.getPermissionList(userAndRoleIdList, orgId);
     }
 
@@ -155,7 +155,7 @@ public class LoginUserApiProvider implements LoginUserApi {
      * @date 2022/4/27 22:57
      */
     @Override
-    public void updateUserLoginInfo(String userId, String device) {
+    public void updateUserLoginInfo(Long userId, String device) {
         sysUserService.updateUserLoginInfo(userId, device);
     }
 }

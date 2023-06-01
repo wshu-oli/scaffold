@@ -1,7 +1,7 @@
 package net.ws.auth.api;
 
-import net.ws.auth.core.dto.ClientLogin;
-import net.ws.auth.core.dto.LoginUser;
+import net.ws.auth.core.pojo.ClientLogin;
+import net.ws.auth.core.pojo.LoginUser;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    LoginUser getUserById(String id);
+    LoginUser getUserById(Long id);
 
     /**
      * 根据id获取C端用户信息，查不到则返回null
@@ -29,7 +29,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    ClientLogin getClientUserById(String id);
+    ClientLogin getClientUserById(Long id);
 
     /**
      * 根据账号获取B端用户信息，查不到则返回null
@@ -69,7 +69,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/4/27 22:53
      */
-    List<JSONObject> listUserByUserIdList(List<String> userIdList);
+    List<JSONObject> listUserByUserIdList(List<Long> userIdList);
 
     /**
      * 根据用户id获取角色集合
@@ -77,7 +77,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/4/27 22:53
      */
-    List<JSONObject> getRoleListByUserId(String userId);
+    List<JSONObject> getRoleListByUserId(Long userId);
 
     /**
      * 根据角色id和用户id集合获取按钮码集合
@@ -85,7 +85,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/4/27 22:54
      */
-    List<String> getButtonCodeListListByUserAndRoleIdList(List<String> userAndRoleIdList);
+    List<String> getButtonCodeListListByUserAndRoleIdList(List<Long> userAndRoleIdList);
 
     /**
      * 根据角色id和用户id集合获取移动端按钮码集合
@@ -93,7 +93,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/4/27 22:54
      */
-    List<String> getMobileButtonCodeListListByUserIdAndRoleIdList(List<String> userAndRoleIdList);
+    List<String> getMobileButtonCodeListListByUserIdAndRoleIdList(List<Long> userAndRoleIdList);
 
     /**
      * 根据角色id和用户id集合获取权限集合
@@ -101,7 +101,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/4/27 22:54
      */
-    List<JSONObject> getPermissionListByUserIdAndRoleIdList(List<String> userAndRoleIdList, String orgId);
+    List<JSONObject> getPermissionListByUserIdAndRoleIdList(List<Long> userAndRoleIdList, Long orgId);
 
     /**
      * 更新用户的登录时间和登录ip等信息
@@ -109,5 +109,5 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/4/27 22:57
      */
-    void updateUserLoginInfo(String userId, String device);
+    void updateUserLoginInfo(Long userId, String device);
 }

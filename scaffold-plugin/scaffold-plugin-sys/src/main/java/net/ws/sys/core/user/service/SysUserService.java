@@ -2,8 +2,8 @@ package net.ws.sys.core.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 
-import net.ws.auth.core.dto.LoginUser;
 import net.ws.sys.core.user.entity.SysUser;
+import net.ws.sys.core.user.resp.SysLoginUserResp;
 
 /**
  * <p>
@@ -18,6 +18,21 @@ public interface SysUserService extends IService<SysUser> {
     /**
      * 根据id获取用户信息，查不到则返回null
      */
-    LoginUser getById(Long id);
+    SysLoginUserResp getUserById(Long id);
+
+    /**
+     * 根据账户获取用户信息，查不到则返回null
+     */
+    SysLoginUserResp getUserByAccount(String account);
+
+    /**
+     * 根据手机号获取用户信息，查不到则返回null
+     */
+    SysLoginUserResp getUserByPhone(String phone);
+
+    /**
+     * 根据邮箱获取用户信息，查不到则返回null
+     */
+    SysLoginUserResp getUserByEmail(String email);
 
 }

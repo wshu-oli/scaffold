@@ -1,6 +1,6 @@
 package net.ws.auth.core.util;
 
-import net.ws.auth.core.dto.LoginUser;
+import net.ws.auth.core.pojo.LoginUser;
 import net.ws.common.util.CommonServletUtil;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package net.ws.auth.core.dto;
+package net.ws.auth.core.pojo;
 
 import net.ws.auth.core.enums.*;
 

@@ -8,7 +8,7 @@ import lombok.Getter;
 @Getter
 public enum UserStatus {
 
-    NORMAL(0, "正常"),
+    ENABLE(0, "正常"),
     DISABLE(1, "禁用"),
     ;
     private final int value;
