@@ -1,6 +1,6 @@
 package net.ws.auth.core.util;
 
-import net.ws.auth.core.dto.LoginUserDto;
+import net.ws.auth.core.dto.LoginUser;
 import net.ws.common.util.CommonServletUtil;
 
 import java.util.List;
@@ -16,8 +16,8 @@ public class StpLoginUserUtil {
     /**
      * 获取当前B端登录用户
      **/
-    public static LoginUserDto getLoginUser() {
-        return (LoginUserDto) StpUtil.getTokenSession().get("loginUser");
+    public static LoginUser getLoginUser() {
+        return (LoginUser) StpUtil.getTokenSession().get("loginUser");
     }
 
     /**

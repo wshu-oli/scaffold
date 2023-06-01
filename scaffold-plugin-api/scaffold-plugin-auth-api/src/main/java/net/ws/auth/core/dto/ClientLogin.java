@@ -1,40 +1,25 @@
-package net.ws.sys.core.user.entity;
-
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.fasterxml.jackson.annotation.JsonFormat;
+package net.ws.auth.core.dto;
 
 import net.ws.auth.core.enums.*;
-import net.ws.db.entity.CommonEntity;
 
-import java.io.Serial;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
-import lombok.*;
-import lombok.experimental.SuperBuilder;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
- * <p>
- * 用户
- * </p>
- *
- * @author Oliver
- * @since 2023-06-01
+ * 基础的C端登录用户对象，可继承此类扩展更多属性
  */
-@Data
-@SuperBuilder
-@AllArgsConstructor
-@NoArgsConstructor
-@TableName(value = "sys_user", autoResultMap = true)
-@EqualsAndHashCode(callSuper = true)
-public class SysUser extends CommonEntity {
+@Getter
+@Setter
+public abstract class ClientLogin {
 
-    @Serial
-    private static final long serialVersionUID = 1L;
     /**
-     * 机构id
+     * id
      */
-    private Long orgId;
+    private Long id;
     /**
      * 姓名
      */
@@ -52,17 +37,13 @@ public class SysUser extends CommonEntity {
      */
     private String email;
     /**
-     * 员工编号
+     * 头像
      */
-    private String empNo;
+    private String avatar;
     /**
      * 性别
      */
     private Gender gender;
-    /**
-     * 头像
-     */
-    private String avatar;
     /**
      * 民族
      */
@@ -76,10 +57,6 @@ public class SysUser extends CommonEntity {
      */
     private String account;
     /**
-     * 家庭住址
-     */
-    private String address;
-    /**
      * 毕业院校
      */
     private String college;
@@ -88,21 +65,17 @@ public class SysUser extends CommonEntity {
      */
     private String homeTel;
     /**
-     * 密码
+     * 扩展信息
      */
-    private String password;
+    private String extJson;
     /**
      * 昵称
      */
     private String nickname;
     /**
-     * 职位id
+     * 用户密码hash值
      */
-    private Long positionId;
-    /**
-     * 主管id
-     */
-    private Long directorId;
+    private String password;
     /**
      * 签名
      */
@@ -112,43 +85,33 @@ public class SysUser extends CommonEntity {
      */
     private String officeTel;
     /**
+     * 排序码
+     */
+    private Integer sortCode;
+    /**
      * 学制
      */
     private Integer eduLength;
     /**
-     * 用户状态
-     */
-    private UserStatus status;
-    /**
      * 出生日期
      */
-    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthday;
     /**
      * 籍贯
      */
     private String nativePlace;
     /**
-     * 证件号码
+     * 家庭住址
      */
-    private String idCardNumber;
-    /**
-     * 入职日期
-     */
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate entryDate;
-    /**
-     * 兼任信息
-     */
-    private String positionJson;
+    private String homeAddress;
     /**
      * 上次登录ip
      */
-    private Integer lastLoginIp;
+    private String lastLoginIp;
     /**
-     * 职级
+     * 证件号码
      */
-    private String positionLevel;
+    private String idCardNumber;
     /**
      * 通信地址
      */
@@ -162,6 +125,10 @@ public class SysUser extends CommonEntity {
      */
     private String emergencyPhone;
     /**
+     * 用户状态
+     */
+    private UserStatus userStatus;
+    /**
      * 上次登录设备
      */
     private String lastLoginDevice;
@@ -170,9 +137,17 @@ public class SysUser extends CommonEntity {
      */
     private String emergencyContact;
     /**
+     * 紧急联系人地址
+     */
+    private String emergencyAddress;
+    /**
      * 上次登录地点
      */
     private String lastLoginAddress;
+    /**
+     * 角色码集合
+     */
+    private List<String> roleCodeList;
     /**
      * 学历
      */
@@ -180,10 +155,51 @@ public class SysUser extends CommonEntity {
     /**
      * 上次登录时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime lastLoginTime;
+    /**
+     * 按钮码集合
+     */
+    private List<String> buttonCodeList;
+    /**
+     * 数据范围集合
+     */
+    private List<DataScope> dataScopeList;
+    /**
+     * 权限码集合
+     */
+    private List<String> permissionCodeList;
+    /**
+     * 移动端按钮码集合
+     */
+    private List<String> mobileButtonCodeList;
     /**
      * 政治面貌
      */
     private PoliticalAffiliation politicalAffiliation;
+
+    /**
+     * 是否可登录，由继承类实现
+     */
+    public abstract Boolean getEnabled();
+
+    /**
+     * 数据范围类
+     *
+     * @author xuyuxiang
+     * @date 2022/8/15 13:57
+     **/
+    @Getter
+    @Setter
+    public static class DataScope {
+
+        /**
+         * API接口
+         */
+        private String apiUrl;
+
+        /**
+         * 数据范围
+         */
+        private List<String> dataScope;
+    }
 }

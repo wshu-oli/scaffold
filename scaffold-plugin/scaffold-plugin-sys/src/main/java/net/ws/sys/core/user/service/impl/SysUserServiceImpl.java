@@ -2,6 +2,7 @@ package net.ws.sys.core.user.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
+import net.ws.auth.core.dto.LoginUser;
 import net.ws.sys.core.user.entity.SysUser;
 import net.ws.sys.core.user.mapper.SysUserMapper;
 import net.ws.sys.core.user.service.SysUserService;
@@ -25,7 +26,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 
 
     @Override
-    public LoginUserDto getById(Long id) {
+    public LoginUser getById(Long id) {
         SysUser sysUser = this.baseMapper.selectById(id);
         return null;
     }

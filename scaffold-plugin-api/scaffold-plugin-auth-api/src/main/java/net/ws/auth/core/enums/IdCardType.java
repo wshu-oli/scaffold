@@ -1,4 +1,4 @@
-package net.ws.sys.enums;
+package net.ws.auth.core.enums;
 
 import lombok.Getter;
 

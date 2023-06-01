@@ -1,10 +1,11 @@
 package net.ws.auth.api;
 
+import net.ws.auth.core.dto.ClientLogin;
+import net.ws.auth.core.dto.LoginUser;
+
 import java.util.List;
 
 import cn.hutool.json.JSONObject;
-import vip.xiaonuo.auth.core.pojo.SaBaseClientLoginUser;
-import vip.xiaonuo.auth.core.pojo.SaBaseLoginUser;
 
 /**
  * 登录用户API，由其他模块实现
@@ -20,7 +21,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    SaBaseLoginUser getUserById(String id);
+    LoginUser getUserById(String id);
 
     /**
      * 根据id获取C端用户信息，查不到则返回null
@@ -28,7 +29,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    SaBaseClientLoginUser getClientUserById(String id);
+    ClientLogin getClientUserById(String id);
 
     /**
      * 根据账号获取B端用户信息，查不到则返回null
@@ -36,7 +37,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    SaBaseLoginUser getUserByAccount(String account);
+    LoginUser getUserByAccount(String account);
 
     /**
      * 根据账号获取C端用户信息，查不到则返回null
@@ -44,7 +45,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    SaBaseClientLoginUser getClientUserByAccount(String account);
+    ClientLogin getClientUserByAccount(String account);
 
     /**
      * 根据手机号获取B端用户信息，查不到则返回null
@@ -52,7 +53,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    SaBaseLoginUser getUserByPhone(String phone);
+    LoginUser getUserByPhone(String phone);
 
     /**
      * 根据手机号获取C端用户信息，查不到则返回null
@@ -60,7 +61,7 @@ public interface LoginUserApi {
      * @author xuyuxiang
      * @date 2022/3/10 16:14
      **/
-    SaBaseClientLoginUser getClientUserByPhone(String phone);
+    ClientLogin getClientUserByPhone(String phone);
 
     /**
      * 根据用户id获取用户集合
