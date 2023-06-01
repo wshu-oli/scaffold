@@ -13,13 +13,14 @@
 package net.ws.auth.annotation;
 
 
+import net.ws.auth.util.StpClientUtil;
+
 import org.springframework.core.annotation.AliasFor;
 
 import java.lang.annotation.*;
 
 import cn.dev33.satoken.annotation.SaCheckRole;
 import cn.dev33.satoken.annotation.SaMode;
-import vip.xiaonuo.auth.core.util.StpClientUtil;
 
 /**
  * 角色认证(前台User版)：必须具有指定角色标识才能进入该方法

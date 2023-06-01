@@ -12,13 +12,14 @@
  */
 package net.ws.auth.annotation;
 
+import net.ws.auth.util.StpClientUtil;
+
 import org.springframework.core.annotation.AliasFor;
 
 import java.lang.annotation.*;
 
 import cn.dev33.satoken.annotation.SaCheckPermission;
 import cn.dev33.satoken.annotation.SaMode;
-import vip.xiaonuo.auth.core.util.StpClientUtil;
 
 /**
  * 权限认证(前台User版)：必须具有指定权限才能进入该方法
