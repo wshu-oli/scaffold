@@ -1,4 +1,4 @@
-package net.ws.db.entity;
+package net.ws.common.entity;
 
 import com.baomidou.mybatisplus.annotation.TableLogic;
 

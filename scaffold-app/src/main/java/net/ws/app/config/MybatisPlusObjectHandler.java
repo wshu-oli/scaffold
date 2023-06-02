@@ -1,4 +1,4 @@
-package handler;
+package net.ws.app.config;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 
@@ -16,7 +16,7 @@ public class MybatisPlusObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
         this.strictInsertFill(metaObject, "createTime", LocalDateTime::now, LocalDateTime.class);
-        this.strictInsertFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
+        this.strictInsertFill(metaObject, "modifyTime", LocalDateTime::now, LocalDateTime.class);
     }
 
     @Override

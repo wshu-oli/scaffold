@@ -18,7 +18,6 @@
     <description>scaffold</description>
     <modules>
         <module>scaffold-common</module>
-        <module>scaffold-db</module>
         <module>scaffold-redis</module>
         <module>scaffold-app</module>
         <module>scaffold-plugin</module>

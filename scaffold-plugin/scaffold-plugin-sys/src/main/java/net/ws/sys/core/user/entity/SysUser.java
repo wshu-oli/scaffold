@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import net.ws.auth.core.enums.*;
-import net.ws.db.entity.CommonEntity;
+import net.ws.common.entity.CommonEntity;
 
 import java.io.Serial;
 import java.time.LocalDate;
@@ -111,6 +111,10 @@ public class SysUser extends CommonEntity {
      * 办公电话
      */
     private String officeTel;
+    /**
+     * 排序码
+     */
+    private Integer sortCode;
     /**
      * 学制
      */

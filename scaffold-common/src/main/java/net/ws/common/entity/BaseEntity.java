@@ -1,9 +1,9 @@
-package net.ws.db.entity;
+package net.ws.common.entity;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import lombok.*;
@@ -17,17 +17,20 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper = true)
-public abstract class UpdateEntity extends BaseEntity {
+public abstract class BaseEntity implements Serializable {
+
+    @TableId(type = IdType.AUTO)
+    private Long id;
 
     /**
-     * 修改人
+     * 创建人
      */
-    private Long modifier;
+    private Long creator;
+
     /**
-     * 更新时间
+     * 创建时间
      */
     @TableField(fill = FieldFill.INSERT)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime modifyTime;
+    private LocalDateTime createTime;
 }
