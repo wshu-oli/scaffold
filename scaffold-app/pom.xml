@@ -37,6 +37,11 @@
             <artifactId>scaffold-plugin-dev</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>net.ws</groupId>
+            <artifactId>scaffold-plugin-sys</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>

@@ -148,7 +148,7 @@ public class SysUser extends CommonEntity {
     /**
      * 上次登录ip
      */
-    private Integer lastLoginIp;
+    private String lastLoginIp;
     /**
      * 职级
      */

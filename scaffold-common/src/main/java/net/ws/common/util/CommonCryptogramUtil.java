@@ -3,8 +3,7 @@ package net.ws.common.util;
 
 import cn.hutool.core.codec.Base64;
 import cn.hutool.crypto.SecureUtil;
-import cn.hutool.crypto.asymmetric.KeyType;
-import cn.hutool.crypto.asymmetric.RSA;
+import cn.hutool.crypto.asymmetric.*;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -46,6 +45,18 @@ public class CommonCryptogramUtil {
         RSA rsa = SecureUtil.rsa(PRIVATE_KEY, PUBLIC_KEY);
         byte[] result = rsa.decrypt(Base64.decode(data), KeyType.PrivateKey);
         return new String(result);
+    }
+
+    /**
+     * 验证加密结果
+     *
+     * @param originalStr 签名原文数据
+     * @param str         加密数据
+     * @return 是否通过
+     */
+    public static boolean verify(String originalStr, String str) {
+        String decrypt = decrypt(str);
+        return originalStr.equals(decrypt);
     }
 
 }

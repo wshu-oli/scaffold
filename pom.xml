@@ -49,6 +49,9 @@
         <aliyun.sdk.ecs.version>3.1.0</aliyun.sdk.ecs.version>
         <oshi.core.version>6.2.2</oshi.core.version>
         <jettison.version>1.5.4</jettison.version>
+        <ip2region.version>2.7.0</ip2region.version>
+        <javax.servlet.version>2.5</javax.servlet.version>
+        <smcrypto.version>0.3.2</smcrypto.version>
     </properties>
 
     <dependencies>
@@ -196,6 +199,18 @@
                 <groupId>org.codehaus.jettison</groupId>
                 <artifactId>jettison</artifactId>
                 <version>${jettison.version}</version>
+            </dependency>
+            <!-- ip2region -->
+            <dependency>
+                <groupId>org.lionsoul</groupId>
+                <artifactId>ip2region</artifactId>
+                <version>${ip2region.version}</version>
+            </dependency>
+            <!-- sm-crypto -->
+            <dependency>
+                <groupId>com.antherd</groupId>
+                <artifactId>sm-crypto</artifactId>
+                <version>${smcrypto.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

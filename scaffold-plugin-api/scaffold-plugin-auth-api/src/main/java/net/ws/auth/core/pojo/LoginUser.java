@@ -149,10 +149,6 @@ public abstract class LoginUser {
      */
     private String positionLevel;
     /**
-     * 最新登录ip
-     */
-    private String latestLoginIp;
-    /**
      * 通信地址
      */
     private String mailingAddress;
@@ -185,14 +181,6 @@ public abstract class LoginUser {
      */
     private String lastLoginAddress;
     /**
-     * 最新登录设备
-     */
-    private String latestLoginDevice;
-    /**
-     * 最新登录地点
-     */
-    private String latestLoginAddress;
-    /**
      * 角色码集合
      */
     private List<String> roleCodeList;
@@ -208,10 +196,6 @@ public abstract class LoginUser {
      * 按钮码集合
      */
     private List<String> buttonCodeList;
-    /**
-     * 最新登录时间
-     */
-    private LocalDateTime latestLoginTime;
     /**
      * 数据范围集合
      */

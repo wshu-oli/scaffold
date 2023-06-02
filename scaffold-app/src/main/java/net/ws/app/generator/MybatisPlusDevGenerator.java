@@ -16,8 +16,8 @@ import java.util.Collections;
 public class MybatisPlusDevGenerator {
 
     private static final String GLOBAL_NAME = "dev";
-    private static final String MODULE_NAME = "config";
-    private static final String TABLE_NAME = "dev_config";
+    private static final String MODULE_NAME = "log";
+    private static final String TABLE_NAME = "dev_log";
     /**
      * 数据源配置
      */

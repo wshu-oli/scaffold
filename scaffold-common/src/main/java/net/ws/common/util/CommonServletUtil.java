@@ -18,9 +18,6 @@ public class CommonServletUtil {
 
     /**
      * 从请求中中获取参数
-     *
-     * @author xuyuxiang
-     * @date 2021/10/14 10:44
      **/
     public static String getParamFromRequest(String paramName) {
         HttpServletRequest request = getRequest();
