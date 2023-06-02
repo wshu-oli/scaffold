@@ -1,7 +1,7 @@
 package net.ws.dev.core.config.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * <p>
@@ -14,5 +14,4 @@ import org.springframework.stereotype.Controller;
 @Controller
 @RequestMapping("/config/devConfig")
 public class DevConfigController {
-
 }

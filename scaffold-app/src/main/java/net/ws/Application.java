@@ -1,4 +1,4 @@
-package net.ws.app;
+package net.ws;
 
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;

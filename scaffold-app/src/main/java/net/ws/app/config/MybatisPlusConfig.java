@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2023年03月18日 13:54
  */
 @Configuration
-@MapperScan(basePackages = {"met.ws.**.mapper"})
+@MapperScan(basePackages = {"net.ws.**.mapper"})
 public class MybatisPlusConfig {
 
     @Bean

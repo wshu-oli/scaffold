@@ -17,9 +17,6 @@ import cn.hutool.json.JSONUtil;
 
 /**
  * 登录用户API接口实现类
- *
- * @author xuyuxiang
- * @date 2022/4/29 13:36
  **/
 @Service("loginUserApi")
 public class LoginUserApiProvider implements LoginUserApi {
@@ -29,9 +26,6 @@ public class LoginUserApiProvider implements LoginUserApi {
 
     /**
      * 根据id获取B端用户信息，查不到则返回null
-     *
-     * @author xuyuxiang
-     * @date 2022/3/10 16:14
      **/
     @Override
     public LoginUser getUserById(Long id) {
@@ -40,9 +34,6 @@ public class LoginUserApiProvider implements LoginUserApi {
 
     /**
      * 不实现C端用户信息
-     *
-     * @author xuyuxiang
-     * @date 2022/3/10 16:14
      **/
     @Override
     public ClientLogin getClientUserById(Long id) {
@@ -51,9 +42,6 @@ public class LoginUserApiProvider implements LoginUserApi {
 
     /**
      * 根据账号获取B端用户信息，查不到则返回null
-     *
-     * @author xuyuxiang
-     * @date 2021/12/28 15:35
      **/
     @Override
     public LoginUser getUserByAccount(String account) {
@@ -62,9 +50,6 @@ public class LoginUserApiProvider implements LoginUserApi {
 
     /**
      * 不实现C端用户信息
-     *
-     * @author xuyuxiang
-     * @date 2022/7/8 10:36
      **/
     @Override
     public ClientLogin getClientUserByAccount(String account) {
@@ -73,9 +58,6 @@ public class LoginUserApiProvider implements LoginUserApi {
 
     /**
      * 根据手机号获取B端用户信息，查不到则返回null
-     *
-     * @author xuyuxiang
-     * @date 2022/8/25 14:09
      **/
     @Override
     public LoginUser getUserByPhone(String phone) {
@@ -84,9 +66,6 @@ public class LoginUserApiProvider implements LoginUserApi {
 
     /**
      * 不实现C端用户信息
-     *
-     * @author xuyuxiang
-     * @date 2022/8/25 14:09
      **/
     @Override
     public ClientLogin getClientUserByPhone(String phone) {
@@ -95,9 +74,6 @@ public class LoginUserApiProvider implements LoginUserApi {
 
     /**
      * 根据用户id获取用户集合
-     *
-     * @author xuyuxiang
-     * @date 2022/4/27 22:53
      */
     @Override
     public List<JSONObject> listUserByUserIdList(List<Long> userIdList) {
@@ -106,56 +82,45 @@ public class LoginUserApiProvider implements LoginUserApi {
 
     /**
      * 根据用户id获取角色集合
-     *
-     * @author xuyuxiang
-     * @date 2022/4/27 22:53
      */
     @Override
     public List<JSONObject> getRoleListByUserId(Long userId) {
-        return sysUserService.getRoleList(userId);
+        //return sysUserService.getRoleList(userId);
+        return null;
     }
 
     /**
      * 根据角色id和用户id集合获取按钮码集合
-     *
-     * @author xuyuxiang
-     * @date 2022/4/27 22:54
      */
     @Override
     public List<String> getButtonCodeListListByUserAndRoleIdList(List<Long> userAndRoleIdList) {
-        return sysUserService.getButtonCodeList(userAndRoleIdList);
+        //return sysUserService.getButtonCodeList(userAndRoleIdList);
+        return null;
     }
 
     /**
      * 根据角色id和用户id集合获取移动端按钮码集合
-     *
-     * @author xuyuxiang
-     * @date 2022/4/27 22:54
      */
     @Override
     public List<String> getMobileButtonCodeListListByUserIdAndRoleIdList(List<Long> userAndRoleIdList) {
-        return sysUserService.getMobileButtonCodeList(userAndRoleIdList);
+        //return sysUserService.getMobileButtonCodeList(userAndRoleIdList);
+        return null;
     }
 
     /**
      * 根据角色id和用户id集合获取权限集合
-     *
-     * @author xuyuxiang
-     * @date 2022/4/27 22:54
      */
     @Override
     public List<JSONObject> getPermissionListByUserIdAndRoleIdList(List<Long> userAndRoleIdList, Long orgId) {
-        return sysUserService.getPermissionList(userAndRoleIdList, orgId);
+        //return sysUserService.getPermissionList(userAndRoleIdList, orgId);
+        return null;
     }
 
     /**
      * 更新用户的登录时间和登录ip等信息
-     *
-     * @author xuyuxiang
-     * @date 2022/4/27 22:57
      */
     @Override
     public void updateUserLoginInfo(Long userId, String device) {
-        sysUserService.updateUserLoginInfo(userId, device);
+        //sysUserService.updateUserLoginInfo(userId, device);
     }
 }
