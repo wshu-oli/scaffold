@@ -14,6 +14,7 @@
     <modules>
         <module>scaffold-plugin-sys-api</module>
         <module>scaffold-plugin-auth-api</module>
+        <module>scaffold-plugin-dev-api</module>
     </modules>
 
     <dependencies>
