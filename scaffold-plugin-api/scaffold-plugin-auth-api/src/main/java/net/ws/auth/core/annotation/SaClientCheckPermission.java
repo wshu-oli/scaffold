@@ -12,20 +12,19 @@
  */
 package net.ws.auth.core.annotation;
 
+import net.ws.auth.core.util.StpClientUtil;
+
 import org.springframework.core.annotation.AliasFor;
 
 import java.lang.annotation.*;
 
 import cn.dev33.satoken.annotation.SaCheckPermission;
 import cn.dev33.satoken.annotation.SaMode;
-import vip.xiaonuo.auth.core.util.StpClientUtil;
 
 /**
  * 权限认证(前台User版)：必须具有指定权限才能进入该方法
  * 可标注在函数、类上（效果等同于标注在此类的所有方法上）
  *
- * @author xuyuxiang
- * @date 2022/3/10 10:40
  **/
 @SaCheckPermission(type = StpClientUtil.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

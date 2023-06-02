@@ -5,42 +5,29 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>net.ws</groupId>
-        <artifactId>scaffold</artifactId>
+        <artifactId>scaffold-plugin</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>scaffold-app</artifactId>
+    <artifactId>scaffold-plugin-dev</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>net.ws</groupId>
-            <artifactId>scaffold-common</artifactId>
+            <artifactId>scaffold-plugin-dev-api</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>net.ws</groupId>
-            <artifactId>scaffold-redis</artifactId>
+            <artifactId>scaffold-plugin-auth-api</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>net.ws</groupId>
-            <artifactId>scaffold-plugin-auth</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>net.ws</groupId>
-            <artifactId>scaffold-plugin-dev</artifactId>
+            <artifactId>scaffold-plugin-sys-api</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
 </project>

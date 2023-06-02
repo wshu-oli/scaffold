@@ -14,6 +14,7 @@
     <modules>
         <module>scaffold-plugin-auth</module>
         <module>scaffold-plugin-sys</module>
+        <module>scaffold-plugin-dev</module>
     </modules>
 
     <dependencies>

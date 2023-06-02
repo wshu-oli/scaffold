@@ -13,10 +13,11 @@ import java.util.Collections;
  * @author Oliver
  * @date 2023年03月18日 13:24
  */
-public class MybatisPlusSysGenerator {
-    private static final String GLOBAL_NAME = "sys";
-    private static final String MODULE_NAME = "user";
-    private static final String TABLE_NAME = "sys_user";
+public class MybatisPlusDevGenerator {
+
+    private static final String GLOBAL_NAME = "dev";
+    private static final String MODULE_NAME = "config";
+    private static final String TABLE_NAME = "dev_config";
     /**
      * 数据源配置
      */
