@@ -114,7 +114,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
             sysUser.setAvatar(CommonAvatarUtil.generateImg(sysUser.getName()));
         }
         // 设置默认密码
-        /*sysUser.setPassword(CommonCryptogramUtil.doHashValue(devConfigApi.getValueByKey
+        /*sysUser.setPassword(CommonCryptogramUtil.encrypt(devConfigApi.getValueByKey
         (SNOWY_SYS_DEFAULT_PASSWORD_KEY)));
         // 设置状态
         sysUser.setUserStatus(SysUserStatusEnum.ENABLE.getValue());
