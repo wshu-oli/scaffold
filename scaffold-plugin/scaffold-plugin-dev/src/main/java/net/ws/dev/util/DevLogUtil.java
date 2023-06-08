@@ -105,9 +105,6 @@ public class DevLogUtil {
 
     /**
      * 构建基础操作日志
-     *
-     * @author xuyuxiang
-     * @date 2020/3/19 14:44
      */
     private static DevLog genBasOpLog() {
         HttpServletRequest request = CommonServletUtil.getRequest();
@@ -125,6 +122,6 @@ public class DevLogUtil {
      */
     private static void creatLogSignValue(DevLog devLog) {
         String logStr = devLog.toString().replaceAll(" +", "");
-        devLog.setSignData(CommonCryptogramUtil.encrypt(logStr));
+        devLog.setSign(CommonCryptogramUtil.encrypt(logStr));
     }
 }

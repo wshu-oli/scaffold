@@ -28,7 +28,7 @@ public class DevLogAop {
     /**
      * 日志切入点
      */
-    @Pointcut("@annotation(vip.xiaonuo.common.annotation.CommonLog)")
+    @Pointcut("@annotation(net.ws.common.annotation.CommonLog)")
     private void getLogPointCut() {
     }
 
